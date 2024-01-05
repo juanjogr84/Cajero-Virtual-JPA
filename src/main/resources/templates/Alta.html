@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Alta nuevo cliente</title>
+<link rel="stylesheet" type="text/css" th:href="@{../css/Index.css}">
+</head>
+<body>
+	<h1> Formulario de alta de un nuevo evento</h1>
+	<form th:action="@{/eventos/alta}" method ="post">
+		<p>Nombre : <input type="text" name="nombre" placeholder="Introduce el nombre del evento"></p>
+		<p>Descripción : <input type="text" name="descripcion" placeholder="Introduce la descripcion del evento"></p>
+		<p>Fecha inicio : <input type="date" name="fechaInicio" placeholder="Introduce la fecha de inicio del evento"></p>
+		<p>Duración : <input type="text" name="duracion" placeholder="Introduce la duracion del evento"></p>
+		<p>Dirección: <input type="text" name="direccion" placeholder="Introduce la direccion de inicio del evento"></p>
+		<p>Destacado : <input type="text" name="destacado" placeholder="Introduce destacado del evento"></p>
+		<p>Aforo máximo : <input type="text" name="aforoMaximo" placeholder="Introduce el aforo del evento"></p>
+		<p>Min. Asistencia : <input type="text" name="minimoAsistencia" placeholder="Introduce la asistencia al evento"></p>
+		<p>Precio : <input type="text" name="precio" placeholder="Introduce el precio del evento"></p>
+		<p>Tipo de evento : <select name="tipo.idTipo">
+								<option value = "1" > Boda </option>
+								<option value = "2"> Cumpleaños </option>
+								<option value = "3" > Despedida </option>
+								<option value = "4"> Concierto </option>
+							</select>
+		</p>
+		
+		<p><input type="submit" value="Enviar"></p>
+	</form>
+
+</body>
+</html>

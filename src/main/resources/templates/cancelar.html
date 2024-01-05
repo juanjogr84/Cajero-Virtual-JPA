@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Editar evento</title>
+<link rel="stylesheet" type="text/css" th:href="@{../css/Index.css}">
+</head>
+<body>
+	<h1>Editor de eventos</h1>
+	
+	<form th:action="@{/eventos/cancelar/{id}(id=${evento.idEvento})}" th:object=${eventos} method="post">
+		<select name="estado">
+			<option value = "Activo"> Activo </option>
+			<option value = "Cancelado"> Cancelado </option>
+		</select>
+		<input type="submit" value="Modificar">
+	</form>
+</body>
+</html>

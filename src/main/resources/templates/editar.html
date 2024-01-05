@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Editar evento</title>
+<link rel="stylesheet" type="text/css" th:href="@{../../css/Index.css}">
+</head>
+<body>
+	<h1>Editor de eventos</h1>
+	<h2>Modifique el campo o los campos que desee cambiar</h2>
+	
+	<form th:action="@{/eventos/editar/{id}(id=${evento.idEvento})}" th:method="post" th:object="${evento}">
+		<p>Nombre : <input type="text" th:field="*{nombre}" th:value="${evento.nombre}"></p>
+		<p>Descripcion : <input type="text" th:field="*{descripcion}"></p>
+		<p>Fecha de inicio : <input type="date" th:field="*{fechaInicio}"></p>
+		<p>Duración : <input type="text" th:field="*{duracion}"></p>
+		<p>Dirección: <input type="text" th:field="*{direccion}"></p>
+		<p>Destacado : <input type="text" th:field="*{destacado}"></p>
+		<p>Aforo máximo : <input type="text" th:field="*{aforoMaximo}"></p>
+		<p>Mínimo asistencia : <input type="text" th:field="*{minimoAsistencia}"></p>
+		<p>Precio : <input type="text" th:field="*{precio}"></p>
+		<p>Tipo : <select id="tipo" name="tipo.idTipo" th:field="*{tipo.idTipo}">
+					<option value = "1"> Boda </option>
+					<option value = "2"> Cumpleaños </option>
+					<option value = "3"> Despedida </option>
+					<option value = "4"> Concierto </option>
+				  </select>  				
+		</p>
+		<p><input type="submit" value="Modificar"></p>	
+	</form>
+	
+</body>
+</html>

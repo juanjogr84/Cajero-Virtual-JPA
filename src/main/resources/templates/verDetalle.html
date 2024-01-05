@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Ver detalles del evento</title>
+<link rel="stylesheet" type="text/css" th:href="@{../../css/Index.css}">
+</head>
+<body>
+	<h1>Detalles del evento</h1>
+	
+	<span id="titulo">Id Evento : </span><span th:text="${evento.idEvento}"></span><br><br>
+	<span id="titulo">Nombre : </span><span th:text="${evento.nombre}"></span><br><br>
+	<span id="titulo">Descripción : </span><span th:text="${evento.descripcion}"></span><br><br>
+	<span id="titulo">Duración : </span><span th:text="${evento.duracion}"></span><br><br>
+	<span id="titulo">Dirección : </span><span th:text="${evento.direccion}"></span><br><br>
+	<span id="titulo">Fecha de inicio : </span><span th:text="${#dates.format(evento.fechaInicio, 'dd - MM - yyyy')}"></span><br><br>
+	<span id="titulo">Estado : </span><span th:text="${evento.estado}"></span><br><br>
+	<span id="titulo">Destacado : </span><span th:text="${evento.destacado}"></span><br><br>
+	<span id="titulo">Aforo máximo : </span><span th:text="${evento.aforoMaximo}"></span><br><br>
+	<span id="titulo">Mínimo asistencia : </span><span th:text="${evento.minimoAsistencia}"></span><br><br>
+	<span id="titulo">Precio : </span><span th:text="${evento.precio}"></span><br><br>
+	<span id="titulo">Tipo : </span><span th:text="${evento.tipo.nombre}"></span><br><br>
+	
+	<button><a th:href="@{/}">Volver al inicio</a></button>
+
+</body>
+</html>

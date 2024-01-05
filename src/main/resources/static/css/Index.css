@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+body{
+	background : #E9EFF2;
+	font-size: 20px;
+	margin-left:5%;
+	margin-right:5%;
+}
+
+h1,h2{
+	text-align:center;
+}
+
+
+button{
+	float:left;
+	margin-right : 80%;
+	margin-bottom : 20px;
+}
+
+#tabla1{
+	float:left;
+	text-align:center;
+	width: 60%;
+}
+
+#tabla2{
+	float:right;
+	text-align:center;
+	width: 39%;
+}
+
+#evTip{
+	background : #7BA3D6 !important;
+}
+
+th{
+	background : #6186B8;
+	text-align:center;
+}
+
+td{
+	background : #C7CFDA;
+}
+
+button{
+	background : #6186B8;
+	font-size: 18px;
+	padding:10px;
+}
+
+#titulo{
+	font-size: 18px;
+	font-weight: bold;
+	color: black;
+}
+
+span{
+	font-size: 18px;
+	color: #6186B8;
+	font-weight: bold;
+}
+
+
